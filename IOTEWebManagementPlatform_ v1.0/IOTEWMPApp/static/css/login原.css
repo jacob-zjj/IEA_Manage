@@ -1,0 +1,56 @@
+body
+{
+    background-image:url("../img/cqupt.png");
+    background-size:100% 100%;
+}
+
+div.hint
+{
+    position:absolute;
+    left:740px;
+    top:370px;
+}
+.hint h3
+{
+    font-size: 16px;
+    color: red;
+}
+
+div.myformdiv
+{
+    /*position:absolute;*/
+    /*left:550px;*/
+    /*top:250px;*/
+    text-align: center;
+    /*background-color: skyblue;*/
+    /*border-radius: 20px;*/
+    /*opacity: 0.5;*/
+    width: 310px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+}
+
+img.loadBackground
+{
+    /*opacity:0.0;*/
+    /*position:absolute;*/
+    /*left:550px;*/
+    /*top:263px;*/
+    text-align: center;
+    /*background-color: blue;*/
+    border-radius: 15px;
+    opacity: 0.2;
+    width: 320px;
+    height: 170px;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+}
+
+p{
+    color: blue;
+}
