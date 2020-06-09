@@ -1,0 +1,84 @@
+.body_con{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 0;
+}
+.body_top{
+    width: 100%;
+    height: 60px;
+    /*background: #1d8ff0;*/
+    background: #417690;
+
+    color: black;
+    font-size: 16px;
+    /*这里是设置行高*/
+    /*line-height: 60px;*/
+    /*text-align: right;*/
+}
+.body_left{
+    width: 260px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    /*background:#263238;*/
+    background: #79aec8;
+    position: relative;
+    font-size: 18px;
+    /*color: #fff;*/
+}
+.body_right{
+    /*width: 100%;*/
+    width: calc(100% - 260px);
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    /*background:#f3faff;*/
+    /*设置背景图片*/
+    /*background: url("../../static/img/listBackground.jpg") no-repeat 60% 20%;*/
+    /*background: #d5d5d5;*/
+    /*background: #2aabd2;*/
+    /*background: #9acfea;*/
+    background: #79aec8;
+    /*设置透明度*/
+    /*opacity: 0.5;*/
+    font-size: 16px;
+    /*color: greenyellow;*/
+    text-align: right;
+    /*line-height: 900px;*/
+}
+/*a[type=button]*/
+/*{*/
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*    padding: 12px 24px;*/
+/*    margin: 0px;*/
+/*    font-size:16px;*/
+/*    line-height: 24px;*/
+/*    text-align: center;*/
+/*    white-space: nowrap;*/
+/*    vertical-align: middle;*/
+/*    cursor: pointer;*/
+/*    color: #ffffff;*/
+/*    background-color: #27A9E3;*/
+/*    border-radius: 3px;*/
+/*    border: none;*/
+/*    -webkit-appearance: none;*/
+/*    outline:none;*/
+/*    width:100%;*/
+/*}*/
+
+.mytext {
+    width: 98%;
+    /*height: 100%;*/
+    /*background: black;*/
+    padding-right: 10px;
+    text-align: right;
+}
+/*.font-big:hover{*/
+/*    color: black;*/
+/*    font-size: 1.2em;*/
+/*}*/
+.font-big{
+    color: burlywood;
+}
