@@ -34,7 +34,10 @@
 <body>
     <div class="body_con">
         <div class="body_top">
-{#            头部#}
+        {#            头部#}
+            <div class="left">
+                <img style="width: 560px;" src="../../static/img/PlatLogo.png">
+            </div>
             <div class="mytext">
                 <a class = "font-big">欢迎【{{ username }}】用户&nbsp;&nbsp;</a>
                 <a href="/login/" type="button" class = "font-big"><b>登陆</b>&nbsp;&nbsp;</a>
@@ -71,7 +74,6 @@
         </div>
 
         <div class="body_right">
-
             {#     这里需要激活模拟器，因为这样数据才能一直更新       #}
             <div id="container_" style="min-width:400px;height:400px; opacity: 0.85"></div>
             <script>
@@ -95,7 +97,7 @@
                                     activeLastPointToolip(chart);
                                     setInterval(function () {
                                         $.ajax({
-                                            url: "/floodlightMonitor/",
+                                            url: "/humidityMonitor/",
                                             data: {read: "webRead"},
                                             type: "GET",
                                             dataType: "JSON",
@@ -106,7 +108,7 @@
                                                 for (var i = 0; i < data.allSensorsJSON.length; i++) {
                                                     if (true == data.allSensorsJSON[i].deviceStatus){
                                                         //找到第一个为true的设备 也就是正在运行的设备
-                                                        y = data.allSensorsJSON[i].luminance;
+                                                        y = data.allSensorsJSON[i].humidity;
                                                         break;
                                                     }
                                                 }
@@ -165,9 +167,8 @@
                         }]
                     });
             </script>
+
             </div>
     </div>
 </body>
 </html>
-
-

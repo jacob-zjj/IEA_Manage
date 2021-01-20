@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+       <meta charset="utf-8">
         <title>平台管理</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,12 +29,14 @@
 
         <script type="text/javascript" src="../../static/js/ManagementPlatform.js"></script>
         <script type="text/javascript" src="../../static/js/nav.js"></script>
-
     </head>
 <body>
     <div class="body_con">
         <div class="body_top">
-{#            头部#}
+        {#            头部#}
+            <div class="left">
+                <img style="width: 560px;" src="../../static/img/PlatLogo.png">
+            </div>
             <div class="mytext">
                 <a class = "font-big">欢迎【{{ username }}】用户&nbsp;&nbsp;</a>
                 <a href="/login/" type="button" class = "font-big"><b>登陆</b>&nbsp;&nbsp;</a>
@@ -69,11 +71,10 @@
                 </ul>
             </div>
         </div>
-
         <div class="body_right">
-
             {#     这里需要激活模拟器，因为这样数据才能一直更新       #}
             <div id="container_" style="min-width:400px;height:400px; opacity: 0.85"></div>
+            {#    动态展示数据变化曲线        #}
             <script>
                     Highcharts.setOptions({
                         global: {
@@ -95,7 +96,7 @@
                                     activeLastPointToolip(chart);
                                     setInterval(function () {
                                         $.ajax({
-                                            url: "/humidityMonitor/",
+                                            url: "/floodlightMonitor/",
                                             data: {read: "webRead"},
                                             type: "GET",
                                             dataType: "JSON",
@@ -106,7 +107,7 @@
                                                 for (var i = 0; i < data.allSensorsJSON.length; i++) {
                                                     if (true == data.allSensorsJSON[i].deviceStatus){
                                                         //找到第一个为true的设备 也就是正在运行的设备
-                                                        y = data.allSensorsJSON[i].humidity;
+                                                        y = data.allSensorsJSON[i].luminance;
                                                         break;
                                                     }
                                                 }
@@ -165,7 +166,9 @@
                         }]
                     });
             </script>
-            </div>
+        </div>
     </div>
 </body>
 </html>
+
+
