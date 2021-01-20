@@ -1,0 +1,27 @@
+账号1：
+   cqupt
+   cqupt123
+
+账号2：
+    wtk
+    wtk123456
+
+如果要使用ipv6进行方法必须在terminal进行启动：
+    python manage.py runserver [fe80::79c6:8910:1f1d:c0e7]:8000
+
+ipv6访问：
+    http://[fe80::79c6:8910:1f1d:c0e7]:8000/login
+
+项目启动：
+    在远程系统上启动需要先进入python虚拟环境：
+        创建虚拟环境：mkvirtualenv -p python3 [虚拟环境名称]
+        进入虚拟环境：workon [虚拟环境名称]
+        删除虚拟环境：rmvirtualenv [虚拟环境名称]
+        退出虚拟环境：deactivate
+
+    启动命令 这里使用9999进行监听
+	nohup python3 manage.py runserver 0.0.0.0:9999
+
+修改节点信息需要重新载入models
+    重新载入数据库操作方法
+
